@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { FaRegImage } from "react-icons/fa6";
 
 function Write() {
   const [value, setValue] = useState("");
@@ -25,8 +26,8 @@ function Write() {
           />
         </div>
       </div>
-      <div className="menu flex flex-col gap-[20px] 1/3">
-        <div className="item border-solid border-gray-200 border-2 p-[10px] h-1/2 w-[100%] px-2">
+      <div className="menu flex flex-col gap-[20px]">
+        <div className="item border-solid border-gray-200 border-2 p-[10px] h-1/2 flex-1 px-2 flex flex-col justify-between">
           <h1 className="font-semibold text-4xl text-[#555]">Publish</h1>
           <div className="flex justify-between">
             <span>
@@ -37,7 +38,8 @@ function Write() {
             </span>
           </div>
           <input style={{ display: "none" }} type="file" name="" id="file" />
-          <label htmlFor="file">Upload Image</label>
+          
+          <label className="text-center bg-teal-800 py-1 rounded-md flex justify-center items-center gap-4 text-white font-semibold" htmlFor="file"><FaRegImage /> Upload Image</label>
           <div className="buttons flex justify-between gap-10">
             <button className="px-[10px] py-[3px] bg-white border-[1px] border-solid border-teal-600 text-teal-600 rounded-md">
               Save as a draft
@@ -48,31 +50,37 @@ function Write() {
           </div>
         </div>
 
-        <div className="item border-solid border-gray-200 border-2 p-[10px]  flex flex-col justify-between text-[12px] text-[#555] px-12">
-          <h1 className="font-semibold text-3xl">Category</h1>
-          <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
-            <input type="radio" name="cat" value="art" id="art" />
-            <label htmlFor="art">Art</label>
-          </div>
-          <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
-            <input type="radio" name="cat" value="science" id="science" />
-            <label htmlFor="science">Science</label>
-          </div>
-          <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
-            <input type="radio" name="cat" value="technology" id="technology" />
-            <label htmlFor="technology">Technology</label>
-          </div>
-          <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
-            <input type="radio" name="cat" value="cinema" id="cinema" />
-            <label htmlFor="art">Cinema</label>
-          </div>
-          <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
-            <input type="radio" name="cat" value="design" id="design" />
-            <label htmlFor="design">Design</label>
-          </div>
-          <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
-            <input type="radio" name="cat" value="food" id="food" />
-            <label htmlFor="food">Food</label>
+        <div className="item border-solid border-gray-200 border-2 p-[10px]  flex flex-col justify-between items-center text-[12px] text-[#555]">
+          <h1 className="font-semibold text-4xl self-start">Category</h1>
+          <div className="flex gap-10 mt-5">
+            <div className="flex flex-col gap-1">
+              <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
+                <input type="radio" name="cat" value="cinema" id="cinema" />
+                <label htmlFor="art">Cinema</label>
+              </div>
+              <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
+                <input type="radio" name="cat" value="design" id="design" />
+                <label htmlFor="design">Design</label>
+              </div>
+              <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
+                <input type="radio" name="cat" value="food" id="food" />
+                <label htmlFor="food">Food</label>
+              </div>
+            </div>
+            <div className="flex flex-col gap-1">
+              <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
+                <input type="radio" name="cat" value="cinema" id="cinema" />
+                <label htmlFor="art">Cinema</label>
+              </div>
+              <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
+                <input type="radio" name="cat" value="design" id="design" />
+                <label htmlFor="design">Design</label>
+              </div>
+              <div className="cat flex items-center gap-[8px] font-semibold text-teal-600">
+                <input type="radio" name="cat" value="food" id="food" />
+                <label htmlFor="food">Food</label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
